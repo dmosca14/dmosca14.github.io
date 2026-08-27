@@ -27,10 +27,21 @@
         }
 
         header {
-            padding: 80px 20px;
+            padding: 80px 20px 60px 20px;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        /* Stile Foto Profilo */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--surface-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         h1 {
@@ -38,6 +49,7 @@
             margin-bottom: 10px;
             letter-spacing: -1px;
             color: var(--text-primary);
+            margin-top: 0;
         }
 
         h1 span {
@@ -69,7 +81,6 @@
             color: var(--text-primary);
         }
 
-        /* Card Base */
         .project-card {
             background-color: var(--surface-color);
             border-radius: 8px;
@@ -81,7 +92,6 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        /* Card Cliccabile */
         a.project-card {
             display: block;
             text-decoration: none;
@@ -91,6 +101,16 @@
         a.project-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+
+        /* Stile Immagini Progetto */
+        .project-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
         }
 
         .project-title {
@@ -117,7 +137,6 @@
             display: inline-block;
         }
 
-        /* Stile del testo-link interno alla card */
         .card-link-text {
             color: var(--accent-color);
             font-weight: 600;
@@ -131,7 +150,6 @@
             border-bottom: 1px solid var(--accent-color);
         }
 
-        /* Stile dei link tradizionali (Header) */
         header .links a {
             color: var(--text-primary);
             text-decoration: none;
@@ -178,6 +196,7 @@
 <body>
 
     <header>
+        <img src="img/profile.png" alt="Damiano Moscardini" class="profile-img">
         <h1>Damiano <span>Moscardini</span></h1>
         <div class="subtitle">
             Physics Student | Quantum Computing & Technologies | Experimentalist
@@ -199,8 +218,8 @@
         <section id="projects">
             <div class="section-title">Projects & Research</div>
 
-            <!-- Card cliccabile -->
             <a href="thesis.html" class="project-card">
+                <img src="img/diffraction.png" alt="Single-Photon Diffraction Pattern" class="project-img">
                 <div class="project-title">3D-Printed Single-Photon Diffraction</div>
                 <div class="tags">
                     <span class="tag">Quantum Optics</span>
@@ -215,8 +234,8 @@
                 <div class="card-link-text">Read the Case Study &rarr;</div>
             </a>
 
-            <!-- Card cliccabile -->
             <a href="https://github.com/dmosca14/QML-Repo" target="_blank" class="project-card">
+                <img src="img/qsvm.svg" alt="Quantum SVM Feature Map" class="project-img">
                 <div class="project-title">Quantum SVM: Encoding Benchmark</div>
                 <div class="tags">
                     <span class="tag">Quantum Machine Learning</span>
@@ -230,8 +249,8 @@
                 <div class="card-link-text">View Repository & Report &rarr;</div>
             </a>
 
-            <!-- Card cliccabile -->
             <a href="mach-zehnder.html" class="project-card">
+                <img src="img/mzi.svg" alt="Sinusoidal interference fringes" class="project-img">
                 <div class="project-title">3D-Printed Mach-Zehnder Interferometer</div>
                 <div class="tags">
                     <span class="tag">Experimental Optics</span>
@@ -248,7 +267,6 @@
 
         <section id="education">
             <div class="section-title">Education</div>
-            <!-- Card non cliccabile (rimane un div) -->
             <div class="project-card" style="border-left: 4px solid var(--text-secondary);">
                 <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
                     <h3 class="project-title" style="margin-bottom: 5px;">M.Sc. Physics (Quantum Computing and Technologies)</h3>
