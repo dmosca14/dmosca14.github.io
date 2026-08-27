@@ -8,14 +8,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         :root {
-            /* Tema Chiaro */
-            --bg-color: #f8f9fa; /* Grigio chiarissimo, riposante per gli occhi */
-            --surface-color: #ffffff; /* Bianco puro per le card */
-            --text-primary: #212529; /* Nero/grigio scuro per massima leggibilità */
-            --text-secondary: #6c757d; /* Grigio medio per testo di supporto */
-            --accent-color: #0f5132; /* Verde profondo accademico */
-            --tag-bg: #d1e7dd; /* Verde pastello chiarissimo per i tag */
-            --border-color: #dee2e6; /* Grigio chiaro per i bordi */
+            --bg-color: #f8f9fa; 
+            --surface-color: #ffffff; 
+            --text-primary: #212529; 
+            --text-secondary: #6c757d; 
+            --accent-color: #0f5132; 
+            --tag-bg: #d1e7dd; 
+            --border-color: #dee2e6; 
         }
 
         body {
@@ -70,6 +69,7 @@
             color: var(--text-primary);
         }
 
+        /* Card Base */
         .project-card {
             background-color: var(--surface-color);
             border-radius: 8px;
@@ -81,7 +81,14 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .project-card:hover {
+        /* Card Cliccabile */
+        a.project-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.project-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.08);
         }
@@ -110,23 +117,28 @@
             display: inline-block;
         }
 
-        .links a {
+        /* Stile del testo-link interno alla card */
+        .card-link-text {
             color: var(--accent-color);
-            text-decoration: none;
-            margin-right: 20px;
             font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
             border-bottom: 1px solid transparent;
             transition: border-bottom 0.2s;
         }
 
-        .links a:hover {
+        a.project-card:hover .card-link-text {
             border-bottom: 1px solid var(--accent-color);
         }
 
-        /* Stile specifico per i link dell'header */
+        /* Stile dei link tradizionali (Header) */
         header .links a {
             color: var(--text-primary);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
             border-bottom: 1px solid var(--border-color);
+            transition: color 0.2s, border-bottom 0.2s;
         }
         
         header .links a:hover {
@@ -187,7 +199,8 @@
         <section id="projects">
             <div class="section-title">Projects & Research</div>
 
-            <div class="project-card">
+            <!-- Card cliccabile -->
+            <a href="thesis.html" class="project-card">
                 <div class="project-title">3D-Printed Single-Photon Diffraction</div>
                 <div class="tags">
                     <span class="tag">Quantum Optics</span>
@@ -199,12 +212,11 @@
                     Utilizing a heavily attenuated 520 nm laser (N < 0.02) and optical components (mounts and ~0.12 mm slits) 
                     entirely prototyped in PLA.
                 </p>
-                <div class="links" style="margin-top: 15px;">
-                    <a href="thesis.html">Read the Case Study</a>
-                </div>
-            </div>
+                <div class="card-link-text">Read the Case Study &rarr;</div>
+            </a>
 
-            <div class="project-card">
+            <!-- Card cliccabile -->
+            <a href="https://github.com/dmosca14/QML-Repo" target="_blank" class="project-card">
                 <div class="project-title">Quantum SVM: Encoding Benchmark</div>
                 <div class="tags">
                     <span class="tag">Quantum Machine Learning</span>
@@ -215,12 +227,11 @@
                     Comparative analysis of 5 quantum encoding strategies (Amplitude, Angle, Basis, IQP, Projected Quantum Kernel). 
                     Evaluating the interaction between encoding and the geometry of 6 datasets using advanced metrics (KTA and Geometric Coefficient).
                 </p>
-                <div class="links" style="margin-top: 15px;">
-                    <a href="https://github.com/dmosca14/QML-Repo" target="_blank">View Repository & Report</a>
-                </div>
-            </div>
+                <div class="card-link-text">View Repository & Report &rarr;</div>
+            </a>
 
-            <div class="project-card">
+            <!-- Card cliccabile -->
+            <a href="mach-zehnder.html" class="project-card">
                 <div class="project-title">3D-Printed Mach-Zehnder Interferometer</div>
                 <div class="tags">
                     <span class="tag">Experimental Optics</span>
@@ -231,14 +242,13 @@
                     Construction and calibration of a Mach-Zehnder interferometer using FDM optical mounts. 
                     Fringe intensity acquisition via OPT101 photodiodes and a Siglent SDS824XHD oscilloscope, with thermally induced phase shift via a Kapton heater.
                 </p>
-                <div class="links" style="margin-top: 15px;">
-                    <a href="mach-zehnder.html">Explore the Experiment</a>
-                </div>
-            </div>
+                <div class="card-link-text">Explore the Experiment &rarr;</div>
+            </a>
         </section>
 
         <section id="education">
             <div class="section-title">Education</div>
+            <!-- Card non cliccabile (rimane un div) -->
             <div class="project-card" style="border-left: 4px solid var(--text-secondary);">
                 <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
                     <h3 class="project-title" style="margin-bottom: 5px;">M.Sc. Physics (Quantum Computing and Technologies)</h3>
