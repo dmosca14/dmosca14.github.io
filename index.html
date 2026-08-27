@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,11 +92,13 @@
         .tag {
             background-color: rgba(0, 255, 204, 0.1);
             color: var(--accent-color);
-            padding: 4px 10px;
+            padding: 6px 12px;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-right: 8px;
+            margin-bottom: 8px;
             font-weight: 600;
+            display: inline-block;
         }
 
         .links a {
@@ -108,6 +110,23 @@
         }
 
         .links a:hover {
+            color: var(--accent-color);
+        }
+
+        ul.conference-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.conference-list li {
+            background-color: var(--surface-color);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--text-secondary);
+        }
+
+        ul.conference-list li strong {
             color: var(--accent-color);
         }
 
@@ -125,82 +144,109 @@
     <header>
         <h1>Damiano <span>Moscardini</span></h1>
         <div class="subtitle">
-            Studente di Fisica | Quantum Computing & Technologies | Experimentalist
+            Physics Student | Quantum Computing & Technologies | Experimentalist
         </div>
         <p style="color: var(--text-secondary);">
-            Appassionato di fisica sperimentale, ottica e tecnologie quantistiche. 
-            Progetto e realizzo setup sperimentali combinando conoscenze teoriche, stampa 3D e programmazione.
+            Passionate about experimental physics, optics, and quantum technologies. 
+            I design and build experimental setups combining theoretical knowledge, 3D printing, and programming.
         </p>
         <div class="links" style="margin-top: 30px;">
-            <a href="https://github.com/TUO-USERNAME" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/TUO-LINKEDIN" target="_blank">LinkedIn</a>
-            <a href="link-al-tuo-cv.pdf" target="_blank">Scarica CV</a>
+            <a href="https://github.com/dmosca14" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/damianomoscardini" target="_blank">LinkedIn</a>
+            <a href="curriculum.pdf" target="_blank">Download CV</a>
         </div>
     </header>
 
     <div class="container">
+        
         <section id="projects">
-            <div class="section-title">Progetti e Ricerca</div>
+            <div class="section-title">Projects & Research</div>
 
-            <!-- PROGETTO 1: TESI -->
             <div class="project-card">
-                <div class="project-title">Diffrazione a "singoli fotoni" con stampa 3D</div>
+                <div class="project-title">3D-Printed Single-Photon Diffraction</div>
                 <div class="tags">
-                    <span class="tag">Ottica Quantistica</span>
-                    <span class="tag">Stampa 3D (FDM)</span>
-                    <span class="tag">Tesi Triennale</span>
+                    <span class="tag">Quantum Optics</span>
+                    <span class="tag">3D Printing (FDM)</span>
+                    <span class="tag">B.Sc. Thesis</span>
                 </div>
                 <p>
-                    Progettazione e realizzazione casalinga dell'esperimento della doppia fenditura in regime di singolo fotone. 
-                    Utilizzando un laser a 520 nm fortemente attenuato (N < 0.02) e componenti ottici (supporti e fenditure da ~0.12 mm) 
-                    prototipati interamente in PLA con una Creality Ender 3. I pattern di interferenza sono stati acquisiti 
-                    su pellicola fotografica ad alta sensibilità.
+                    Design and home-built realization of the double-slit experiment in the single-photon regime. 
+                    Utilizing a heavily attenuated 520 nm laser (N < 0.02) and optical components (mounts and ~0.12 mm slits) 
+                    entirely prototyped in PLA.
                 </p>
                 <div class="links" style="margin-top: 15px;">
-                    <a href="tesi.html">Leggi il Case Study</a>
+                    <a href="thesis.html">Read the Case Study</a>
                 </div>
             </div>
 
-            <!-- PROGETTO 2: QML -->
             <div class="project-card">
-                <div class="project-title">Quantum Support Vector Machines: Encoding Benchmark</div>
+                <div class="project-title">Quantum SVM: Encoding Benchmark</div>
                 <div class="tags">
                     <span class="tag">Quantum Machine Learning</span>
                     <span class="tag">Python</span>
                     <span class="tag">Scikit-Learn</span>
                 </div>
                 <p>
-                    Analisi comparativa di 5 strategie di encoding quantistico (Amplitude, Angle, Basis, IQP, Projected Quantum Kernel) per la classificazione supervisionata. 
-                    Il progetto valuta l'interazione tra la scelta dell'encoding e la geometria di 6 diversi dataset, utilizzando metriche avanzate come il Kernel-Target Alignment (KTA) e il Coefficiente Geometrico.
+                    Comparative analysis of 5 quantum encoding strategies (Amplitude, Angle, Basis, IQP, Projected Quantum Kernel). 
+                    Evaluating the interaction between encoding and the geometry of 6 datasets using advanced metrics (KTA and Geometric Coefficient).
                 </p>
                 <div class="links" style="margin-top: 15px;">
-                    <a href="https://github.com/TUO-USERNAME/QML-Repo" target="_blank">View Repository & Report</a>
+                    <a href="https://github.com/dmosca14/QML-Repo" target="_blank">View Repository & Report</a>
                 </div>
             </div>
 
-            <!-- PROGETTO 3: MACH-ZEHNDER -->
             <div class="project-card">
-                <div class="project-title">Interferometro Mach-Zehnder Stampato in 3D</div>
+                <div class="project-title">3D-Printed Mach-Zehnder Interferometer</div>
                 <div class="tags">
-                    <span class="tag">Ottica Sperimentale</span>
+                    <span class="tag">Experimental Optics</span>
                     <span class="tag">Hardware</span>
-                    <span class="tag">Acquisizione Dati</span>
+                    <span class="tag">Data Acquisition</span>
                 </div>
                 <p>
-                    Progettazione, calibrazione e validazione di un interferometro Mach-Zehnder utilizzando supporti ottici interamente realizzati con stampa 3D FDM. 
-                    L'acquisizione dell'intensità delle frange è affidata a fotodiodi OPT101 interfacciati con un oscilloscopio Siglent SDS824XHD. 
-                    Lo shift di fase è indotto in modo controllato tramite modulazione termica (riscaldatore Kapton).
+                    Construction and calibration of a Mach-Zehnder interferometer using FDM optical mounts. 
+                    Fringe intensity acquisition via OPT101 photodiodes and a Siglent SDS824XHD oscilloscope, with thermally induced phase shift via a Kapton heater.
                 </p>
                 <div class="links" style="margin-top: 15px;">
-                    <a href="mach-zehnder.html">Esplora l'Esperimento</a>
+                    <a href="mach-zehnder.html">Explore the Experiment</a>
                 </div>
             </div>
-
         </section>
+
+        <section id="skills">
+            <div class="section-title">Technical Skills</div>
+            <div>
+                <span class="tag">Python (PennyLane)</span>
+                <span class="tag">3D Printing (FDM)</span>
+                <span class="tag">AutoCAD</span>
+                <span class="tag">MatLab</span>
+                <span class="tag">LabVIEW</span>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">Arduino</span>
+            </div>
+        </section>
+
+        <section id="conferences">
+            <div class="section-title">Conferences & Publications</div>
+            <ul class="conference-list">
+                <li>
+                    <strong>IEEE QCE26</strong> (Toronto, Sep 2026) – <em>Student Volunteer</em>
+                </li>
+                <li>
+                    <strong>CISF26</strong> (Rome, 2026) – <em>Poster Presenter (B.Sc. Thesis)</em>
+                </li>
+                <li>
+                    <strong>SIPE25</strong> (Bari, 2025) – <em>Poster Presenter (B.Sc. Thesis)</em>
+                </li>
+                <li>
+                    <strong>LoT25</strong> (Pisa/Florence, 2025) – <em>Poster Presenter (B.Sc. Thesis)</em>
+                </li>
+            </ul>
+        </section>
+
     </div>
 
     <footer>
-        &copy; 2026 Damiano Moscardini. In partenza per QCE26.
+        &copy; 2026 Damiano Moscardini. Heading to QCE26.
     </footer>
 
 </body>
