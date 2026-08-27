@@ -106,12 +106,15 @@
         /* Stile Immagini Progetto */
         .project-img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 240px;
+            object-fit: contain; /* <-- Cambiato in contain: mostra TUTTA l'immagine */
+            background-color: #f1f3f5; /* Sfondo pulito per riempire eventuali bande laterali */
             border-radius: 6px;
             margin-bottom: 20px;
             border: 1px solid var(--border-color);
+            padding: 10px; /* Un minimo di respiro interno */
         }
+
 
         .project-title {
             font-size: 1.5rem;
