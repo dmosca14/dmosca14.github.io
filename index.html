@@ -106,13 +106,12 @@
         /* Stile Immagini Progetto */
         .project-img {
             width: 100%;
-            height: 240px;
-            object-fit: contain; /* <-- Cambiato in contain: mostra TUTTA l'immagine */
-            background-color: #f1f3f5; /* Sfondo pulito per riempire eventuali bande laterali */
+            aspect-ratio: var(--img-ratio, 16 / 9); /* rapporto fisso: coerente su ogni device */
+            object-fit: cover;
+            background-color: #f1f3f5; /* placeholder durante il caricamento */
             border-radius: 6px;
             margin-bottom: 20px;
             border: 1px solid var(--border-color);
-            padding: 10px; /* Un minimo di respiro interno */
         }
 
 
@@ -212,7 +211,7 @@
             <a href="https://github.com/damianomoscardini" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/damianomoscardini" target="_blank">LinkedIn</a>
             <a href="mailto:ciao@damianomoscardini.page">Email</a>
-            <a href="curriculum.pdf" target="_blank">Download CV</a>
+            <a href="cv/curriculum.pdf" target="_blank">Download CV</a>
         </div>
     </header>
 
@@ -221,24 +220,8 @@
         <section id="projects">
             <div class="section-title">Projects & Research</div>
 
-            <a href="thesis.html" class="project-card">
-                <img src="img/diffraction.png" alt="Single-Photon Diffraction Pattern" class="project-img">
-                <div class="project-title">3D-Printed Single-Photon Diffraction</div>
-                <div class="tags">
-                    <span class="tag">3D Printing</span>
-                    <span class="tag">Quantum Optics</span>
-                    <span class="tag">B.Sc. Thesis</span>
-                </div>
-                <p>
-                    Design and home-built realization of the double-slit experiment in the single-photon regime. 
-                    Utilizing a heavily attenuated 520 nm laser (N < 0.02) and optical components (mounts and ~0.12 mm slits) 
-                    entirely prototyped in PLA.
-                </p>
-                <div class="card-link-text">View Repository & Report &rarr;</div>
-            </a>
-
             <a href="https://github.com/damianomoscardini/qsvm-encoding-benchmark" target="_blank" class="project-card">
-                <img src="img/qsvm.png" alt="Quantum SVM Feature Map" class="project-img">
+                <img src="img/qsvm.png" alt="Quantum SVM Feature Map" class="project-img" style="--img-ratio: 2688 / 1152;">
                 <div class="project-title">QSVM Encoding Benchmark</div>
                 <div class="tags">
                     <span class="tag">Quantum Machine Learning</span>
@@ -254,7 +237,7 @@
             </a>
 
             <a href="https://github.com/damianomoscardini/3d-printed-mzi" class="project-card">
-                <img src="img/mzi.svg" alt="Sinusoidal interference fringes" class="project-img">
+                <img src="img/mzi.svg" alt="Sinusoidal interference fringes" class="project-img" style="--img-ratio: 648.21 / 393.16;">
                 <div class="project-title">3D-Printed Mach-Zehnder Interferometer</div>
                 <div class="tags">
                     <span class="tag">Experimental Optics</span>
@@ -264,6 +247,22 @@
                 <p>
                     Construction and calibration of a Mach-Zehnder interferometer using FDM optical mounts. 
                     Fringe intensity acquisition via OPT101 photodiodes and a Siglent SDS824XHD oscilloscope, with thermally induced phase shift via a Kapton heater.
+                </p>
+                <div class="card-link-text">View Repository & Report &rarr;</div>
+            </a>
+
+                        <a href="thesis.html" class="project-card">
+                <img src="img/diffraction.png" alt="Single-Photon Diffraction Pattern" class="project-img" style="--img-ratio: 3226 / 702;">
+                <div class="project-title">3D-Printed Single-Photon Diffraction</div>
+                <div class="tags">
+                    <span class="tag">3D Printing</span>
+                    <span class="tag">Quantum Optics</span>
+                    <span class="tag">B.Sc. Thesis</span>
+                </div>
+                <p>
+                    Design and home-built realization of the double-slit experiment in the single-photon regime. 
+                    Utilizing a heavily attenuated 520 nm laser (N < 0.02) and optical components (mounts and ~0.12 mm slits) 
+                    entirely prototyped in PLA.
                 </p>
                 <div class="card-link-text">View Repository & Report &rarr;</div>
             </a>
@@ -309,16 +308,16 @@
             <div class="section-title">Conferences & Publications</div>
             <ul class="conference-list">
                 <li>
-                    <strong>IEEE QCE26 (International Conference on Quantum Computing & Engineering)</strong> (Toronto, Sep 2026) &ndash; <em>Student Volunteer</em>
+                    <strong>IEEE QCE26 (International Conference on Quantum Computing & Engineering):</strong> Selected as Student Volunteer, Toronto, September 2026 (Upcoming).
                 </li>
                 <li>
-                    <strong>CISF26 (Italian Conference of Physics Students)</strong> (Rome, 2026) &ndash; <em>Oral Presenter</em>
+                    <strong>CISF26 (Italian Conference of Physics Students):</strong> Attendee and Oral Presenter, Rome, 2026.
                 </li>
                 <li>
-                    <strong>SIPE25 (Spanish Italian Physics Exchange)</strong> (Bari, 2025) &ndash; <em>Oral Presenter</em>
+                    <strong>SIPE25 (Spanish Italian Physics Exchange):</strong> Attendee and Oral Presenter, Bari, 2025.
                 </li>
                 <li>
-                    <strong>LoT25 (Lights of Tuscany)</strong> (Pisa/Florence, 2025) &ndash; <em>Poster Presenter</em>
+                    <strong>LoT25 (Lights of Tuscany):</strong> Attendee and Poster Presenter, Pisa and Florence, 2025.
                 </li>
             </ul>
         </section>
